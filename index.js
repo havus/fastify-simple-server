@@ -24,7 +24,7 @@ fastify.get('/hello-world', async function handler (request, reply) {
 
 // Run the server!
 try {
-  await fastify.listen({ port: process.env.PORT });
+  await fastify.listen({ port: process.env.PORT || 3001 });
 } catch (err) {
   fastify.log.error(err)
   process.exit(1);
